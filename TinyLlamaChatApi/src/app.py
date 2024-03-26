@@ -9,7 +9,7 @@ class HelloWorld(Resource):
         return {'hello': 'world'}
 
 api.add_resource(HelloWorld, '/')
-app.add_resource(LlmUtil, '/chat')
+api.add_resource(LlmUtil, '/chat')
 
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
