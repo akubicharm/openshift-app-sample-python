@@ -1,11 +1,14 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Resource, Api
+from llmUtil import LlmUtil
 
 app = Flask(__name__)
 api = Api(app)
 
 class HelloWorld(Resource):
     def get(self):
+        msg = request.get_json()
+        print(msg)        
         return {'hello': 'world'}
 
 api.add_resource(HelloWorld, '/')
