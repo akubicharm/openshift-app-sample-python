@@ -5,7 +5,7 @@ from llmUtil import LlmUtil
 
 app = Flask(__name__)
 api = Api(app)
-CORS(app, allow_headers="*")
+CORS(app, allow_headers="*", methods="*")
 
 
 class HelloWorld(Resource):
