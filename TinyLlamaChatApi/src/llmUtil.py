@@ -12,6 +12,12 @@ class LlmUtil(Resource):
         print(req)
         output = llm("<user>\n" + req['msg'] + "\n<assistant>\n", max_tokens=40)
         return (output['choices'][0]["text"] + "...")
+    
+    def get(self):
+        req = request.get_json()
+        print(req)
+        output = llm("<user>\n" + req['msg'] + "\n<assistant>\n", max_tokens=40)
+        return (output['choices'][0]["text"] + "...")    
 
 
 if __name__ == '__main__':
