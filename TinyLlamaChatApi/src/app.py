@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
-from llmUtil import LlmUtil
+#from llmUtil import LlmUtil
 
 app = Flask(__name__)
 api = Api(app)
@@ -12,7 +12,7 @@ class HelloWorld(Resource):
         return {'hello': 'world'}
 
 api.add_resource(HelloWorld, '/')
-api.add_resource(LlmUtil, '/chat')
+#api.add_resource(LlmUtil, '/chat')
 
 if __name__ == '__main__':
     app.run(port=8080, debug=False)
