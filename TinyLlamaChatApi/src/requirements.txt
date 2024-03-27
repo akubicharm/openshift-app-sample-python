@@ -1,3 +1,4 @@
 flask_restful
 llama-cpp-python
 Flask
+flask_cors
